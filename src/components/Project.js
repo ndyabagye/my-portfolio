@@ -37,8 +37,8 @@ export default function Project() {
                                     {project.title}
                                 </a>
                             </h3>
-                            <div className="text-gray-500 text-xs space-xs-4 overflow-auto">
-                                <div className="flex flex-wrap">
+                            <div className="text-gray-500 text-xs space-xs-4 overflow-y-scroll h-32">
+                                <div className="flex flex-wrap space-x-2 whitespace-nowrap">
                                     <span>
                                         <strong className="font-bold">Finished on </strong>:{"  "}
                                         {new Date(project.date).toLocaleDateString()}{" "}
@@ -52,7 +52,7 @@ export default function Project() {
                                         {project.projectType}
                                     </span>
                                 </div>
-                                <p className="my-6 text-lg text-gray-700 leading-relaxed mx-auto">
+                                <p className="my-6 text-base text-gray-700 leading-relaxed mx-auto">
                                     {project.description}
                                 </p>
                                 <a href={project.link} rel="noopener noreferrer" target="_blank" className="text-red-500 font-bold hover:underline hover:text-red-400 text-xl">
